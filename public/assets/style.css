@@ -1,0 +1,15 @@
+body {
+    background-color: papayawhip;
+}
+
+.drop_menu {
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(113, 104, 230);
+    color: white;
+}
+
+.jumbotron {
+    margin-top: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

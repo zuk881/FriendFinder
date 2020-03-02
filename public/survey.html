@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Survey Page</title>
+</head>
+
+<body>
+    <div class="container"><br><br>
+        <h1>Survey Questions</h1>
+        <hr>
+        <h2>About You</h2>
+        <hr>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="photo">Link to Photo Image (Required)</label>
+                <input type="image" class="form-control" id="photo">
+            </div>
+            <hr>
+            <h3>
+                <strong>Question 1</strong>
+            </h3>
+            <h4>Have you ever pondered the airspeed velocity of a unladen swallow?</h4>
+            <label for="q1">Choose an Option</label><br>
+            <select id="q1" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 2</strong>
+            </h3>
+            <h4>"Curse your sudden but inevitable betrayal!"</h4>
+            <label for="q2">Choose an Option</label><br>
+            <select id="q2" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 3</strong>
+            </h3>
+            <h4>"Man walks down the street in a hat like that, you know he's not afraid of anything"</h4>
+            <label for="q3">Choose an Option</label><br>
+            <select id="q3" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 4</strong>
+            </h3>
+            <h4>"Oh! Now we see the violence inherent in the system! Help!, Help!, I'm being repressed!"</h4>
+            <label for="q4">Choose an Option</label><br>
+            <select id="q4" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 5</strong>
+            </h3>
+            <h4>Iphone is best phone</h4>
+            <label for="q5">Choose an Option</label><br>
+            <select id="q5" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 6</strong>
+            </h3>
+            <h4>"Its just a flesh wound"</h4>
+            <label for="q6">Choose an Option</label><br>
+            <select id="q6" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 7</strong>
+            </h3>
+            <h4>"Ten percent of nothin' is... let me do the math here... nothin' into nothin'... carry the nothin'..."</h4>
+            <label for="q7">Choose an Option</label><br>
+            <select id="q7" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 8</strong>
+            </h3>
+            <h4>Android is best phone</h4>
+            <label for="q8">Choose an Option</label><br>
+            <select id="q8" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 9</strong>
+            </h3>
+            <h4>"Well, my time of not taking you seriously is coming to a middle"</h4>
+            <label for="q9">Choose an Option</label><br>
+            <select id="q9" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <h3>
+                <strong>Question 10</strong>
+            </h3>
+            <h4>"Strange women lying in ponds, distributing swords, is no basis for a system of goverment."</h4>
+            <label for="q10">Choose an Option</label><br>
+            <select id="q10" class="drop_menu">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+         
+                         
+            <button type="submit" class="btn btn-primary" id="survey-btn">Submit</button>
+        </form><br>
+
+        <p><a href="/api/friends">API Friends List |</a> <a href="https://github.com/zuk881/FriendFinder">GitHub
+                Repo</a></p>
+    </div>
+    <script type="text/javascript">
+
+var friendList = [];
+
+
+        $("#survey-btn").on("click", function () {
+            event.preventDefault();
+
+            var newSurvey = {
+                name: $("#name").val().trim(),
+                image: $("#photo").val().trim(),
+                q1: $("#q1").val().trim(),
+                q2: $("#q2").val().trim(),
+                q3: $("#q3").val().trim(),
+                q4: $("#q4").val().trim(),
+                q5: $("#q5").val().trim(),
+                q6: $("#q6").val().trim(),
+                q7: $("#q7").val().trim(),
+                q8: $("#q8").val().trim(),
+                q9: $("#q9").val().trim(),
+                q10: $("#q10").val().trim()
+            }
+            friendList.push(newSurvey)
+            console.log(newSurvey)
+            console.log(friendList)
+
+            document.getElementById("myForm").reset();
+               
+
+            $.post("/api/friends", newSurvey).then(function (data) {
+                console.log(data);
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>
