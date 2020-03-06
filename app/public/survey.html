@@ -4,19 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Survey Page</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
         body {
             background-color: papayawhip;
@@ -27,6 +19,9 @@
             border-radius: 5px;
             background-color: rgb(113, 104, 230);
             color: white;
+        }
+        img {
+            border-radius: 12px;
         }
     </style>
 </head>
@@ -185,36 +180,40 @@
         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/zuk881/FriendFinder"
                 target="_blank">GitHub
                 Repo</a></p>
-    </div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <!-- Modal -->
+        <div id="friendModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">Best Friend Match</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="matchFriend"></h2>
+                        <img id="matchPhoto" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+    </div><br>
 
     <script type="text/javascript">
 
+        // on click function for form submission and post
         $("#survey-btn").on("click", function () {
             event.preventDefault();
 
+            // grab info from survey and trim white space
             var newSurvey = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
+
+                // push scores from survey into an array
                 scores: [$("#q1").val().trim(),
                 $("#q2").val().trim(),
                 $("#q3").val().trim(),
@@ -227,21 +226,36 @@
                 $("#q10").val().trim()]
             }
            
+            // testing and debugging
             console.log(newSurvey)
 
+            // falsy check if user fails to fill out form, alert if incomplete
             if (!newSurvey.name || !newSurvey.photo) {
                 alert("Please fill out empty forms")
             } else {
                 $.post("/api/friends", newSurvey, function (data) {
-                    console.log(data);
-                   
-                });
 
-            }
+                    // testing and debugging
+                    console.log("Best match name is: " + data.name);
+                    console.log("best match photo is: " + data.photo);
+
+                    // pass data from post response to modal
+                    $("#matchFriend").text(data.name);
+                    $("#matchPhoto").attr("src", data.photo);
+
+                    // toggle modal to open
+                    $("#friendModal").modal("toggle");
+
+                });
+            };
+
+            // reset form after submission
             document.getElementById("myForm").reset();
-           
+
         });
-   
+
+
+
     </script>
 
 </body>

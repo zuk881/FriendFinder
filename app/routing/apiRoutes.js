@@ -14,14 +14,14 @@ module.exports = function (app) {
     // API POST requests, sends data to the friendsList array when a form is submitted
     app.post("/api/friends", function (req, res) {
         // respond true if post request is sucessful
-        res.json(true);
+        // res.json(true);
 
         // set variable to compare scores against
         var lowestScore = 100;
 
         // variable to store new survey submission
         var newFriend = req.body;
-        
+
         // variable to store the location of friends
         var index;
 
@@ -67,6 +67,11 @@ module.exports = function (app) {
 
         // push survey into array
         friends.push(req.body);
+        res.json(friends[index]);
+
     })
 }
+
+
+
 
