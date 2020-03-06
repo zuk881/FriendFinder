@@ -3,14 +3,14 @@
 var path = require("path");
 
 // ROUTING 
-
 module.exports = function (app) {
 
     // Get Requests
-    app.get("/home", function (req, res) {
+    app.get("/", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
-
+   
+    // Get Requests
     app.get("/survey", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });

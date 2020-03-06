@@ -1,10 +1,6 @@
 // Dependencies
-// =============================================================
 
 const express = require("express");
-
-// Sets up the Express App
-// =============================================================
 
 // EXPRESS Configuration
 
@@ -27,7 +23,6 @@ require("./app/routing/htmlRoutes")(app);
 
 // LISTENER
 // Code to start our server
-
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 

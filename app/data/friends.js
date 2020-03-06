@@ -1,6 +1,6 @@
 // Data
-// array to hold all the survey results
 
+// array to hold all the survey results
 var friendsList = [
 {
     name: "Snoopy",
@@ -16,6 +16,11 @@ var friendsList = [
     name: "Nyan Cat",
     photo: src="https://i.imgur.com/qKLSatB.jpg",
     scores: [1, 1, 3, 4, 5, 3, 3, 3, 4, 1,]
+},
+{
+    name: "Grumpy Cat",
+    photo: src="https://i.imgur.com/YXtNeYv.jpg",
+    scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 }
 ];
 
