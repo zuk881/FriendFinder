@@ -6,7 +6,7 @@ This match making application will help you find the friend you didn't know you 
 
 ![catGif](https://i.imgur.com/TZreltD.png)
 
-### Installing
+## Installing
 To run the application locally, you will need to clone the repository to your local machine.
 ### HTTPS:
 #### https://github.com/zuk881/FriendFinder.git
