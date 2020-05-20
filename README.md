@@ -4,7 +4,7 @@ This match making application will help you find the friend you didn't know you 
 [Try it here!](https://aqueous-reaches-64573.herokuapp.com/
 )
 
-![catGif](https://i.imgur.com/TZreltD.png)
+![catGif](https://i.imgur.com/WzUdzgj.png)
 
 ## Installing
 To run the application locally, you will need to clone the repository to your local machine.
