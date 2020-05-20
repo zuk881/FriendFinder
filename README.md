@@ -18,14 +18,14 @@ To run the application locally, you will need to clone the repository to your lo
 ### You can then run the app locally by running: 
 ** $ npm server.js
 
-### Built With
+## Built With
 * Express.js
 * Node.js
 * JQuery
 * npm
 * Bootstrap
 
-### Authors
+## Authors
 * Richard https://github.com/zuk881
 
 
