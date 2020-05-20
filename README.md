@@ -14,9 +14,9 @@ To run the application locally, you will need to clone the repository to your lo
 #### git@github.com:zuk881/FriendFinder.git
 ## Using
 ### Once cloned, cd into the respository and install dependencies by running:
-** $ npm install 
+*$ npm install* 
 ### You can then run the app locally by running: 
-** $ npm server.js
+*$ npm server.js*
 
 ## Built With
 * Express.js
