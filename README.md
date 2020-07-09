@@ -1,5 +1,5 @@
 # Friend Finder
-This match making application will help you find the friend you didn't know you were missing!. This survey has ten questions that ask you to select on a scale of 1-5, how much you agree with it. When finished it will find your best match for you and diplay the result.
+### This match making application will help you find the friend you didn't know you were missing!. This survey has ten questions that ask you to select on a scale of 1-5, how much you agree with it. When finished it will find your best match for you and diplay the result.
 
 [Try it here!](https://aqueous-reaches-64573.herokuapp.com/
 )
